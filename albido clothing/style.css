@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(./images/j-lee-LYBSBjGo-5s-unsplash.jpg) no-repeat center center/cover;
+  height: 100vh;
+  color: rgb(255, 239, 212);
+  position: relative;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px 40px 10px 40px;
+  color: rgb(195, 73, 73);
+}
+nav ul {
+  width: 20%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+nav ul li {
+  cursor: pointer;
+}
+nav ul li:hover {
+  color: rgb(222, 111, 111);
+}
+nav .title {
+  text-align: center;
+  text-transform: uppercase;
+}
+nav .title h1 {
+  font-size: 1.8rem;
+}
+nav .title h5 {
+  font-weight: 400;
+}
+nav .toggle-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+  transition: transform 250ms;
+  cursor: pointer;
+}
+nav .toggle-btn i {
+  color: rgb(195, 73, 73);
+  font-size: 1.6rem;
+}
+nav .sidebar {
+  display: none;
+}
+
+main {
+  padding-left: 55px;
+  margin-top: 130px;
+}
+main h3 {
+  font-weight: 300;
+  position: relative;
+}
+main h3::after {
+  position: absolute;
+  content: "";
+  margin-left: 10px;
+  top: 15px;
+  width: 30%;
+  height: 2px;
+  background-color: currentColor;
+}
+main h1 {
+  margin-top: 25px;
+  font-size: 4rem;
+  width: 410px;
+}
+main .reveal-btn {
+  margin-top: 25px;
+  padding: 20px 60px 20px 60px;
+  background-color: transparent;
+  border: 2px solid rgb(255, 241, 216);
+  color: rgb(255, 241, 216);
+  cursor: pointer;
+}
+
+@media (max-width: 460px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav .clothings {
+    display: none;
+  }
+  nav .title {
+    display: none;
+  }
+  nav .title h1 {
+    font-size: 1.4rem;
+  }
+  nav .title h5 {
+    font-size: 0.7rem;
+  }
+  nav .toggle-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+  }
+  nav .sidebar {
+    background-color: rgb(246, 207, 187);
+    color: rgb(238, 121, 108);
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50%;
+    display: block;
+    z-index: 10;
+    transform: translate(-100%);
+    transition: transform 250ms;
+  }
+  nav .sidebar .sidebar-heading {
+    text-transform: uppercase;
+    padding: 10px 10px 10px 10px;
+  }
+  nav .sidebar .sidebar-heading h1 {
+    font-size: 1.8rem;
+  }
+  nav .sidebar .sidebar-heading h5 {
+    font-weight: 400;
+  }
+  nav .sidebar .sidebar-section {
+    margin-top: 18px;
+    padding: 10px 20px 10px 10px;
+  }
+  nav .sidebar .sidebar-section .sidebar-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav .sidebar .sidebar-section .sidebar-title .reveal-title h3 {
+    font-weight: 600;
+  }
+  nav .sidebar .sidebar-section .sidebar-title .reveal-btn {
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  nav .sidebar .sidebar-section .sidebar-title .reveal-btn i {
+    color: rgb(211, 47, 47);
+    font-size: 1.1rem;
+  }
+  nav .sidebar .sidebar-section .sidebar-title .reveal-btn i:hover {
+    color: rgb(225, 113, 113);
+  }
+  nav .sidebar .sidebar-section .sidebar-title .reveal-btn .down-icon {
+    display: block;
+  }
+  nav .sidebar .sidebar-section .sidebar-title .reveal-btn .up-icon {
+    display: none;
+  }
+  nav .sidebar .sidebar-section .sidebar-text {
+    display: none;
+    width: 120px;
+  }
+  nav .sidebar .show-hidden .sidebar-title .reveal-btn .down-icon {
+    display: none;
+  }
+  nav .sidebar .show-hidden .sidebar-title .reveal-btn .up-icon {
+    display: block;
+  }
+  nav .sidebar .show-hidden .sidebar-text {
+    display: block;
+  }
+  nav .show-sidebar {
+    transform: translate(0);
+  }
+  nav .info {
+    display: none;
+  }
+  main h3::after {
+    width: 40%;
+  }
+}/*# sourceMappingURL=style.css.map */
